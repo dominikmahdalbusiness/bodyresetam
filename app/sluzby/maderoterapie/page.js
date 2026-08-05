@@ -74,7 +74,7 @@ export default function MaderoterapiePage() {
         <div className="grid gap-10 md:grid-cols-2 items-center rounded-lg bg-linen p-8 md:p-10 relative overflow-hidden">
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 bg-leaves bg-no-repeat bg-right-top bg-[length:260px_auto] lg:bg-[length:560px_auto] opacity-40 mix-blend-multiply"
+            className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-right-top opacity-55 mix-blend-multiply"
           />
           <div className="relative">
             <Reveal as="h2" className="font-display text-2xl md:text-3xl text-bark mb-4">

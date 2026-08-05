@@ -52,7 +52,7 @@ export default function EventyPage() {
           {i % 2 === 1 && (
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 bg-leaves bg-no-repeat bg-right-top bg-[length:260px_auto] lg:bg-[length:560px_auto] opacity-40 mix-blend-multiply"
+              className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-right-top opacity-55 mix-blend-multiply"
             />
           )}
           <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20 grid gap-12 md:grid-cols-2 items-center">
