@@ -47,12 +47,12 @@ export default function EventyPage() {
       {events.map((e, i) => (
         <section
           key={e.num}
-          className={`relative overflow-hidden ${i % 2 === 1 ? "bg-linen" : ""}`}
+          className={`relative ${i % 2 === 1 ? "bg-linen" : ""}`}
         >
           {i % 2 === 1 && (
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 bg-leaves bg-cover bg-right-top opacity-40 mix-blend-multiply"
+              className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-right-top opacity-40 mix-blend-multiply"
             />
           )}
           <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20 grid gap-12 md:grid-cols-2 items-center">

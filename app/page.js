@@ -179,7 +179,7 @@ export default function HomePage() {
       <section className="bg-linen relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-leaves bg-cover bg-left-bottom opacity-40 mix-blend-multiply"
+          className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-left-bottom opacity-40 mix-blend-multiply"
         />
         <div className="relative mx-auto max-w-6xl px-4 py-20">
           <Reveal as="p" y={12} className="eyebrow mb-3">

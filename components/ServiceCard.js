@@ -33,7 +33,7 @@ export default function ServiceCard({
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
           ) : (
-            <div className="absolute inset-0 bg-leaves bg-cover bg-center opacity-70 mix-blend-multiply flex items-center justify-center">
+            <div className="absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-center opacity-70 mix-blend-multiply flex items-center justify-center">
               <span className="font-display text-7xl italic text-bark/40">
                 {name.charAt(0)}
               </span>

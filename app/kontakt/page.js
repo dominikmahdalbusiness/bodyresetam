@@ -55,7 +55,7 @@ export default function KontaktPage() {
         <Reveal className="rounded-lg bg-linen p-8 relative overflow-hidden">
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 bg-leaves bg-cover bg-right-top opacity-40 mix-blend-multiply"
+            className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-right-top opacity-40 mix-blend-multiply"
           />
           <div className="relative grid gap-8 sm:grid-cols-3">
             <div>
