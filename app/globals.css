@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand text-ink antialiased;
+}
+
+::selection {
+  background-color: theme("colors.sage");
+  color: theme("colors.cream");
+}
+
+/* Viditelný focus stav pro přístupnost — neodstraňovat */
+:focus-visible {
+  outline: 2px solid theme("colors.sagedark");
+  outline-offset: 2px;
+}
+
+@layer components {
+  /* Malý nadpisek nad sekcí — vzhled převzatý z IG tiskovin (řídce prostrkané verzálky) */
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.28em] text-sagedark;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage px-7 py-3 text-sm font-medium uppercase tracking-widest text-cream transition hover:bg-sagedark hover:shadow-lg hover:shadow-sage/30;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-bark/30 px-7 py-3 text-sm font-medium uppercase tracking-widest text-bark transition hover:border-bark hover:bg-bark hover:text-cream;
+  }
+}
