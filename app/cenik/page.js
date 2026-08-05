@@ -58,11 +58,25 @@ export default function CenikPage() {
         <div className="grid gap-8 md:grid-cols-3 items-start">
           <PriceGroup title="Pilates" items={pilatesPrices} />
           <PriceGroup title="Masáže" items={massagePrices} />
-          <div className="space-y-8">
-            <PriceGroup title="Maderoterapie" items={maderoPrices} />
-            <PriceGroup title="Doplňky" items={extras} />
-          </div>
+          <PriceGroup title="Maderoterapie" items={maderoPrices} />
         </div>
+
+        <Reveal className="mt-8 rounded-lg bg-cream px-6 py-8 shadow-sm md:px-8">
+          <h2 className="font-display text-2xl text-bark text-center mb-5">Doplňky</h2>
+          <Stagger className="grid gap-x-10 sm:grid-cols-2 divide-y divide-bark/10 sm:divide-y-0">
+            {extras.map((p) => (
+              <StaggerItem
+                key={p.name}
+                className="flex items-baseline justify-between gap-4 py-4 sm:py-0"
+              >
+                <p className="text-bark">{p.name}</p>
+                <p className="font-display text-xl text-sagedark whitespace-nowrap text-right">
+                  {p.price}
+                </p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <Reveal className="rounded-lg bg-linen px-6 py-8 md:px-8 flex flex-col">
