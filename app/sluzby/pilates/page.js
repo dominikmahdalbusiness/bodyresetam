@@ -86,21 +86,21 @@ export default function PilatesPage() {
             <p className="eyebrow mb-3">Varianty lekcí</p>
             <Stagger className="divide-y divide-bark/10">
               {pilatesPrices.map((p) => (
-                <StaggerItem
-                  key={p.name}
-                  className="flex items-baseline justify-between gap-4 py-3"
-                >
-                  <div>
-                    <p className="text-bark text-sm">{p.name}</p>
-                    {p.duration && (
-                      <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
-                        {p.duration}
-                      </p>
-                    )}
+                <StaggerItem key={p.name} className="py-3">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <div>
+                      <p className="text-bark text-sm">{p.name}</p>
+                      {p.duration && (
+                        <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
+                          {p.duration}
+                        </p>
+                      )}
+                    </div>
+                    <p className="font-display text-lg text-sagedark whitespace-nowrap">
+                      {p.price}
+                    </p>
                   </div>
-                  <p className="font-display text-lg text-sagedark whitespace-nowrap">
-                    {p.price}
-                  </p>
+                  {p.desc && <p className="mt-1 text-xs text-ink/60">{p.desc}</p>}
                 </StaggerItem>
               ))}
             </Stagger>

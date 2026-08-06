@@ -23,21 +23,21 @@ function PriceGroup({ title, items, note }) {
       <h2 className="font-display text-2xl text-bark text-center mb-4">{title}</h2>
       <Stagger className="divide-y divide-bark/10">
         {items.map((p) => (
-          <StaggerItem
-            key={p.name}
-            className="flex items-baseline justify-between gap-4 py-4"
-          >
-            <div>
-              <p className="text-bark">{p.name}</p>
-              {p.duration && (
-                <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
-                  {p.duration}
-                </p>
-              )}
+          <StaggerItem key={p.name} className="py-4">
+            <div className="flex items-baseline justify-between gap-4">
+              <div>
+                <p className="text-bark">{p.name}</p>
+                {p.duration && (
+                  <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
+                    {p.duration}
+                  </p>
+                )}
+              </div>
+              <p className="font-display text-xl text-sagedark whitespace-nowrap text-right">
+                {p.price}
+              </p>
             </div>
-            <p className="font-display text-xl text-sagedark whitespace-nowrap text-right">
-              {p.price}
-            </p>
+            {p.desc && <p className="mt-1 text-xs text-ink/60">{p.desc}</p>}
           </StaggerItem>
         ))}
       </Stagger>
