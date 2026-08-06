@@ -12,7 +12,7 @@ const events = [
   {
     num: "01",
     title: "Lekce ve studiu",
-    text: "Pilates se pravidelně schází v malém studiu na Hradišťské — v komorní skupině, kde mám čas na každého a na každý detail v pohybu. Přesně tak, jak to má podle mě fungovat.",
+    text: "Pilates se pravidelně schází v malém studiu na Hradišťské — ve skupině max. 10 lidí, kde mám čas na každého a na každý detail v pohybu. Přesně tak, jak to má podle mě fungovat.",
     main: { src: "/images/eventy/eventy-09.jpg", alt: "Lekce Pilates ve studiu" },
     accent: { src: "/images/eventy/eventy-10.jpg", alt: "Cvičení s pomůckami ve studiu" },
     align: "right",
@@ -20,7 +20,7 @@ const events = [
   {
     num: "02",
     title: "Cvičení pod širým nebem",
-    text: "Když to počasí dovolí, přesuneme podložky ven. Ranní cvičení na trávě uprostřed Uherského Brodu má úplně jinou energii — a vždycky se sejde plno známých tváří.",
+    text: "Když to počasí dovolí, přesuneme podložky ven. Ranní cvičení na trávě uprostřed Uherského Brodu má úplně jinou energii.",
     main: { src: "/images/eventy/eventy-14.jpg", alt: "Skupinové cvičení v zahradě" },
     accent: { src: "/images/eventy/eventy-08.jpg", alt: "Společná fotka po cvičení venku" },
     align: "left",
@@ -28,7 +28,7 @@ const events = [
   {
     num: "03",
     title: "Setkání po cvičení",
-    text: "Občas lekci prodloužíme o společnou snídani nebo drink na terase. Je to čas, který věnujeme jen sobě a lidem kolem — a proto se do Body Reset ráda vracím i mimo lekce.",
+    text: "Občas lekci prodloužíme o společnou snídani nebo drink na terase. Je to čas, který věnujeme jen sobě a lidem kolem.",
     main: { src: "/images/eventy/eventy-13.jpg", alt: "Společná snídaně po cvičení" },
     accent: { src: "/images/eventy/eventy-15.jpg", alt: "Posezení na terase" },
     align: "right",

@@ -17,7 +17,7 @@ export const metadata = {
     "Ceník masáží a maderoterapie Body Reset v Uherském Brodě. Masáže od 890 Kč, maderoterapie od 850 Kč, permanentky i dárkové poukazy.",
 };
 
-function PriceGroup({ title, items }) {
+function PriceGroup({ title, items, note }) {
   return (
     <div className="rounded-t-[6rem] rounded-b-lg bg-cream px-6 pt-10 pb-4 shadow-sm md:px-8">
       <h2 className="font-display text-2xl text-bark text-center mb-4">{title}</h2>
@@ -41,6 +41,7 @@ function PriceGroup({ title, items }) {
           </StaggerItem>
         ))}
       </Stagger>
+      {note && <p className="pb-2 pt-3 text-xs text-ink/50">{note}</p>}
     </div>
   );
 }
@@ -57,7 +58,11 @@ export default function CenikPage() {
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-8 md:grid-cols-3 items-start">
           <PriceGroup title="Pilates" items={pilatesPrices} />
-          <PriceGroup title="Masáže" items={massagePrices} />
+          <PriceGroup
+            title="Masáže"
+            items={massagePrices}
+            note="Masáž vždy přizpůsobím individuálně po konzultaci na místě."
+          />
           <PriceGroup title="Maderoterapie" items={maderoPrices} />
         </div>
 

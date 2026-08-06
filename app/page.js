@@ -31,7 +31,7 @@ const services = [
     name: "Maderoterapie",
     desc: "Tvarování postavy a podpora lymfatického systému pomocí dřevěných nástrojů.",
     image: "/images/maderoterapie-tool.jpg",
-    imageAlt: "Dřevěný nástroj pro maderoterapii",
+    imageAlt: "Sada dřevěných nástrojů pro maderoterapii",
     price: "od 850 Kč",
   },
 ];
@@ -128,7 +128,7 @@ export default function HomePage() {
             O mně
           </Reveal>
           <Reveal as="h2" delay={0.05} className="font-display text-3xl md:text-4xl text-bark mb-6">
-            Pohyb je mým životem už od malička
+            Pohyb je součástí mého života už od malička
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mb-4 text-ink/80 leading-relaxed">

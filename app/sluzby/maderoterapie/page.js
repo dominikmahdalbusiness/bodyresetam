@@ -20,6 +20,10 @@ const highlights = [
     text: "Technika podporuje prokrvení a lymfatický systém, pomáhá tělu zbavovat se odpadních látek.",
   },
   {
+    name: "Odvodnění a otoky",
+    text: "Pomáhá tělu zbavovat se přebytečné vody a zmírňuje otoky, nejčastěji v oblasti nohou a břicha.",
+  },
+  {
     name: "Pravidelnost se vyplatí",
     text: "Nejlepší výsledky přináší série ošetření v pravidelných intervalech — proto nabízím zvýhodněnou permanentku na 10 vstupů.",
   },
@@ -39,7 +43,7 @@ export default function MaderoterapiePage() {
           <PhotoStack
             main={{
               src: "/images/maderoterapie-tool.jpg",
-              alt: "Dřevěný nástroj pro maderoterapii",
+              alt: "Sada dřevěných nástrojů pro maderoterapii",
             }}
             align="right"
           />
@@ -59,7 +63,7 @@ export default function MaderoterapiePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16">
-        <Stagger className="grid gap-8 md:grid-cols-3 mb-14">
+        <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-14">
           {highlights.map((h, i) => (
             <StaggerItem key={h.name} className="rounded-lg bg-cream p-7 shadow-sm">
               <p className="font-display text-4xl italic text-sage mb-4">

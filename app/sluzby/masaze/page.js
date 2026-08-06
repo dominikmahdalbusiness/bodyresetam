@@ -74,26 +74,32 @@ export default function MasazePage() {
           <Reveal as="h2" className="font-display text-2xl md:text-3xl text-bark mb-5">
             Varianty a ceny
           </Reveal>
-          <Stagger className="divide-y divide-bark/10 rounded-lg bg-cream px-6 py-2 shadow-sm mb-8">
+          <Stagger className="divide-y divide-bark/10 rounded-lg bg-cream px-6 py-2 shadow-sm mb-4">
             {massagePrices.map((p) => (
-              <StaggerItem
-                key={p.name}
-                className="flex items-baseline justify-between gap-4 py-4"
-              >
-                <div>
-                  <p className="text-bark">{p.name}</p>
-                  <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
-                    {p.duration}
+              <StaggerItem key={p.name} className="py-4">
+                <div className="flex items-baseline justify-between gap-4">
+                  <div>
+                    <p className="text-bark">{p.name}</p>
+                    <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
+                      {p.duration}
+                    </p>
+                  </div>
+                  <p className="font-display text-xl text-sagedark whitespace-nowrap">
+                    {p.price}
                   </p>
                 </div>
-                <p className="font-display text-xl text-sagedark whitespace-nowrap">
-                  {p.price}
-                </p>
+                {p.desc && (
+                  <p className="mt-2 text-sm text-ink/70 leading-relaxed">{p.desc}</p>
+                )}
               </StaggerItem>
             ))}
           </Stagger>
 
           <Reveal>
+            <p className="text-xs text-ink/50 mb-6">
+              Masáž vám vždy přizpůsobím individuálně po krátké konzultaci na
+              místě.
+            </p>
             <p className="text-sm text-ink/70 mb-4">
               Termín masáže domlouváme telefonicky nebo přes Instagram —
               Reservio slouží jen k rezervaci lekcí Pilates.

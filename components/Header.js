@@ -10,6 +10,7 @@ const links = [
   { href: "/cenik", label: "Ceník" },
   { href: "/recenze", label: "Recenze" },
   { href: "/eventy", label: "Eventy" },
+  { href: "/prostory", label: "Prostory" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 

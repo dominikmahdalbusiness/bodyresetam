@@ -92,9 +92,11 @@ export default function PilatesPage() {
                 >
                   <div>
                     <p className="text-bark text-sm">{p.name}</p>
-                    <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
-                      {p.duration}
-                    </p>
+                    {p.duration && (
+                      <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
+                        {p.duration}
+                      </p>
+                    )}
                   </div>
                   <p className="font-display text-lg text-sagedark whitespace-nowrap">
                     {p.price}
@@ -117,8 +119,8 @@ export default function PilatesPage() {
               ))}
             </ul>
             <p className="mt-5 text-sm text-ink/70 leading-relaxed">
-              Stačí pohodlné oblečení a protiskluzové ponožky. Volná místa
-              najdete v rezervačním systému.
+              Stačí pohodlné oblečení, protiskluzové ponožky a vlastní
+              podložku. Volná místa najdete v rezervačním systému.
             </p>
             <a
               href={RESERVIO_URL}

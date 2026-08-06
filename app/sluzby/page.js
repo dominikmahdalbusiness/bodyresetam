@@ -31,7 +31,7 @@ const services = [
     name: "Maderoterapie",
     desc: "Tvarování postavy a podpora prokrvení pomocí dřevěných nástrojů.",
     image: "/images/maderoterapie-tool.jpg",
-    imageAlt: "Dřevěný nástroj pro maderoterapii",
+    imageAlt: "Sada dřevěných nástrojů pro maderoterapii",
     imageAspect: "aspect-square",
     price: "od 850 Kč",
   },

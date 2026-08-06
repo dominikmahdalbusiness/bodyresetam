@@ -44,7 +44,7 @@ export default function OMnePage() {
       <PageHeader
         eyebrow="Mgr. Aneta Máčalová"
         title="O mně"
-        lead="Ahoj, jmenuji se Aneta a pohyb je mým životem už od malička."
+        lead="Ahoj, jmenuji se Aneta a pohyb je součástí mého života už od malička."
       />
 
       <section className="mx-auto max-w-6xl px-4 py-16 grid gap-12 md:grid-cols-[0.85fr_1.15fr] items-start">
