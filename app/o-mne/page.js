@@ -3,7 +3,6 @@ import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 import { Stagger, StaggerItem } from "@/components/Stagger";
-import PhotoGrid from "@/components/PhotoGrid";
 
 export const metadata = {
   title: "O mně",
@@ -28,14 +27,6 @@ const facts = [
     label: "Můj relax",
     text: "Dlouhé procházky se psem a čas s nejbližšími.",
   },
-];
-
-const profilePhotos = [
-  { src: "/images/profil/profil-03.jpg", alt: "Aneta Máčalová při cvičení" },
-  { src: "/images/profil/profil-04.jpg", alt: "Detail z lekce Pilates" },
-  { src: "/images/profil/profil-06.jpg", alt: "Detail masáže" },
-  { src: "/images/eventy/eventy-11.jpg", alt: "Lekce Pilates ve studiu" },
-  { src: "/images/eventy/eventy-07.jpg", alt: "Cvičení v zahradě" },
 ];
 
 export default function OMnePage() {
@@ -104,25 +95,6 @@ export default function OMnePage() {
                 Sledovat na Instagramu
               </a>
             </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Profilové fotky */}
-      <section className="relative overflow-hidden bg-linen">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-leaves bg-cover sm:bg-contain bg-no-repeat bg-left-bottom opacity-55 mix-blend-multiply"
-        />
-        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <Reveal as="p" y={12} className="eyebrow mb-3">
-            V pohybu
-          </Reveal>
-          <Reveal as="h2" delay={0.05} className="font-display text-3xl md:text-4xl text-bark mb-10">
-            Pár fotek z praxe
-          </Reveal>
-          <Reveal delay={0.1}>
-            <PhotoGrid photos={profilePhotos} />
           </Reveal>
         </div>
       </section>

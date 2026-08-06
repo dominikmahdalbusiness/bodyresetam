@@ -15,9 +15,11 @@ const groups = [
     text: "Klidný prostor, kam si přijdete odpočinout od svalové bolesti i každodenního shonu. Termín domlouváme telefonicky nebo přes Instagram.",
     photos: [
       { src: "/images/prostory/masaze-01.jpg", alt: "Prostor pro masáže a maderoterapii" },
-      { src: "/images/prostory/masaze-02.jpg", alt: "Klidový kout k odpočinku" },
+      { src: "/images/prostory/masaze-05.jpg", alt: "Detail ošetřovny" },
       { src: "/images/prostory/masaze-03.jpg", alt: "Posezení před ošetřením" },
-      { src: "/images/prostory/masaze-04.jpg", alt: "Vchod do Body Reset na Moravské 83" },
+      { src: "/images/prostory/masaze-06.jpg", alt: "Klidová atmosféra prostoru" },
+      { src: "/images/prostory/masaze-02.jpg", alt: "Klidový kout k odpočinku" },
+      { src: "/images/prostory/masaze-07.jpg", alt: "Detail prostoru se zelení" },
     ],
   },
   {
@@ -26,8 +28,10 @@ const groups = [
     text: "Studio, kde se pravidelně scházíme na lekce Pilates — v úterý a ve čtvrtek.",
     photos: [
       { src: "/images/prostory/hradistska-01.jpg", alt: "Studio Pilates na Hradišťské" },
-      { src: "/images/prostory/hradistska-02.jpg", alt: "Detail studia" },
       { src: "/images/prostory/hradistska-03.jpg", alt: "Cvičení ve studiu" },
+      { src: "/images/prostory/hradistska-02.jpg", alt: "Detail studia" },
+      { src: "/images/prostory/hradistska-05.jpg", alt: "Lekce Pilates ve studiu" },
+      { src: "/images/prostory/hradistska-06.jpg", alt: "Cvičení s pomůckami" },
       { src: "/images/prostory/hradistska-04.jpg", alt: "Skupinová lekce ve studiu" },
     ],
   },
