@@ -61,7 +61,7 @@ export default function CenikPage() {
           <PriceGroup
             title="Masáže"
             items={massagePrices}
-            note="Masáž vždy přizpůsobím individuálně po konzultaci na místě."
+            note="Masáž vždy přizpůsobím individuálně po konzultaci."
           />
           <PriceGroup title="Maderoterapie" items={maderoPrices} />
         </div>
