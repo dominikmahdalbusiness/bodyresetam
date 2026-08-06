@@ -77,21 +77,19 @@ export default function MasazePage() {
           <Reveal className="rounded-lg bg-cream px-6 py-2 shadow-sm mb-8">
             <Stagger className="divide-y divide-bark/10">
               {massagePrices.map((p) => (
-                <StaggerItem key={p.name} className="py-4">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <div>
-                      <p className="text-bark">{p.name}</p>
-                      <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
-                        {p.duration}
-                      </p>
-                    </div>
-                    <p className="font-display text-xl text-sagedark whitespace-nowrap">
-                      {p.price}
+                <StaggerItem
+                  key={p.name}
+                  className="flex items-baseline justify-between gap-4 py-4"
+                >
+                  <div>
+                    <p className="text-bark">{p.name}</p>
+                    <p className="text-xs uppercase tracking-widest text-ink/50 mt-0.5">
+                      {p.duration}
                     </p>
                   </div>
-                  {p.desc && (
-                    <p className="mt-2 text-sm text-ink/70 leading-relaxed">{p.desc}</p>
-                  )}
+                  <p className="font-display text-xl text-sagedark whitespace-nowrap">
+                    {p.price}
+                  </p>
                 </StaggerItem>
               ))}
             </Stagger>

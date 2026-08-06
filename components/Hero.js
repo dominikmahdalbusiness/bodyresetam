@@ -19,7 +19,7 @@ export default function Hero() {
       {/* Botanické stíny — brandový podklad z tiskovin klientky */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-right-top opacity-70 mix-blend-multiply"
+        className="pointer-events-none absolute inset-0 bg-leaves bg-cover sm:bg-contain bg-no-repeat bg-right-top opacity-70 mix-blend-multiply"
       />
 
       <div className="relative mx-auto max-w-6xl px-4 pt-16 pb-20 md:pt-24 md:pb-28 grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">

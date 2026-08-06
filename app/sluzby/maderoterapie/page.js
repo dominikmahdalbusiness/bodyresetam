@@ -42,8 +42,8 @@ export default function MaderoterapiePage() {
         <Reveal className="mb-10 md:mb-0">
           <PhotoStack
             main={{
-              src: "/images/maderoterapie-tool.jpg",
-              alt: "Sada dřevěných nástrojů pro maderoterapii",
+              src: "/images/profil/profil-07.jpg",
+              alt: "Maderoterapie v praxi",
             }}
             align="right"
           />
@@ -78,7 +78,7 @@ export default function MaderoterapiePage() {
         <div className="grid gap-10 md:grid-cols-2 items-center rounded-lg bg-linen p-8 md:p-10 relative overflow-hidden">
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-right-top opacity-55 mix-blend-multiply"
+            className="pointer-events-none absolute inset-0 bg-leaves bg-cover sm:bg-contain bg-no-repeat bg-right-top opacity-55 mix-blend-multiply"
           />
           <div className="relative">
             <Reveal as="h2" className="font-display text-2xl md:text-3xl text-bark mb-4">

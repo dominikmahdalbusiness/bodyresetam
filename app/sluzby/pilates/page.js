@@ -72,8 +72,8 @@ export default function PilatesPage() {
           <Reveal className="mb-16 md:mb-20">
             <PhotoStack
               main={{
-                src: "/images/eventy/eventy-09.jpg",
-                alt: "Skupinová lekce Pilates ve studiu",
+                src: "/images/profil/profil-08.jpg",
+                alt: "Lekce Pilates",
               }}
               accent={{
                 src: "/images/profil/profil-04.jpg",

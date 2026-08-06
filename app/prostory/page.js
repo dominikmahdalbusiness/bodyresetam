@@ -1,12 +1,11 @@
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
-import { Stagger } from "@/components/Stagger";
 import PhotoGrid from "@/components/PhotoGrid";
 
 export const metadata = {
   title: "Prostory",
   description:
-    "Nahlédněte do prostor Body Reset v Uherském Brodě — prostor pro masáže a maderoterapii na Moravské 83, studio Pilates na Hradišťské i letní cvičení u Kafeterie.",
+    "Nahlédněte do prostor Body Reset v Uherském Brodě — prostor pro masáže a maderoterapii na Moravské 83, studio Pilates na Hradišťské i letní cvičení u Kafeterky.",
 };
 
 const groups = [
@@ -18,6 +17,7 @@ const groups = [
       { src: "/images/prostory/masaze-01.jpg", alt: "Prostor pro masáže a maderoterapii" },
       { src: "/images/prostory/masaze-02.jpg", alt: "Klidový kout k odpočinku" },
       { src: "/images/prostory/masaze-03.jpg", alt: "Posezení před ošetřením" },
+      { src: "/images/prostory/masaze-04.jpg", alt: "Vchod do Body Reset na Moravské 83" },
     ],
   },
   {
@@ -28,14 +28,15 @@ const groups = [
       { src: "/images/prostory/hradistska-01.jpg", alt: "Studio Pilates na Hradišťské" },
       { src: "/images/prostory/hradistska-02.jpg", alt: "Detail studia" },
       { src: "/images/prostory/hradistska-03.jpg", alt: "Cvičení ve studiu" },
+      { src: "/images/prostory/hradistska-04.jpg", alt: "Skupinová lekce ve studiu" },
     ],
   },
   {
-    eyebrow: "Kafeterie · přes léto",
+    eyebrow: "Kafeterka · přes léto",
     title: "Pilates pod širým nebem",
-    text: "Přes léto se lekce občas přesouvají ven, do zahrady Kafeterie — cvičení na trávě, dobrá káva po ruce.",
+    text: "Přes léto se lekce občas přesouvají ven, do zahrady Kafeterky — cvičení na trávě, dobrá káva po ruce.",
     photos: [
-      { src: "/images/prostory/kafeterka-01.jpg", alt: "Cvičení v zahradě Kafeterie" },
+      { src: "/images/prostory/kafeterka-01.jpg", alt: "Cvičení v zahradě Kafeterky" },
       { src: "/images/prostory/kafeterka-02.jpg", alt: "Skupinové cvičení venku" },
       { src: "/images/prostory/kafeterka-03.jpg", alt: "Společná fotka po cvičení venku" },
     ],
@@ -59,7 +60,7 @@ export default function ProstoryPage() {
           {i % 2 === 1 && (
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-right-top opacity-55 mix-blend-multiply"
+              className="pointer-events-none absolute inset-0 bg-leaves bg-cover sm:bg-contain bg-no-repeat bg-right-top opacity-55 mix-blend-multiply"
             />
           )}
           <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
@@ -72,9 +73,9 @@ export default function ProstoryPage() {
             <Reveal delay={0.08} className="mb-10 max-w-xl">
               <p className="text-ink/80 leading-relaxed">{g.text}</p>
             </Reveal>
-            <Stagger className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6">
+            <Reveal delay={0.1}>
               <PhotoGrid photos={g.photos} aspect="aspect-[3/4]" />
-            </Stagger>
+            </Reveal>
           </div>
         </section>
       ))}

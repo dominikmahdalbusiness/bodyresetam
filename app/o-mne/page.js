@@ -112,7 +112,7 @@ export default function OMnePage() {
       <section className="relative overflow-hidden bg-linen">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-leaves bg-contain bg-no-repeat bg-left-bottom opacity-55 mix-blend-multiply"
+          className="pointer-events-none absolute inset-0 bg-leaves bg-cover sm:bg-contain bg-no-repeat bg-left-bottom opacity-55 mix-blend-multiply"
         />
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal as="p" y={12} className="eyebrow mb-3">
@@ -121,9 +121,9 @@ export default function OMnePage() {
           <Reveal as="h2" delay={0.05} className="font-display text-3xl md:text-4xl text-bark mb-10">
             Pár fotek z praxe
           </Reveal>
-          <Stagger className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6">
+          <Reveal delay={0.1}>
             <PhotoGrid photos={profilePhotos} />
-          </Stagger>
+          </Reveal>
         </div>
       </section>
     </>
