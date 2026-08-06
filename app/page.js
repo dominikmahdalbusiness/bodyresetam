@@ -4,10 +4,17 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import Reveal from "@/components/Reveal";
 import { Stagger, StaggerItem } from "@/components/Stagger";
+import PhotoGrid from "@/components/PhotoGrid";
 import { pilatesPrices, massagePrices, maderoPrices } from "@/lib/pricing";
 import { RESERVIO_URL } from "@/lib/reservio";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import { reviews, REVIEWS_RATING, REVIEWS_COUNT } from "@/lib/reviews";
+
+const omnePhotos = [
+  { src: "/images/profil/profil-03.jpg", alt: "Aneta Máčalová při cvičení" },
+  { src: "/images/profil/profil-04.jpg", alt: "Detail z lekce Pilates" },
+  { src: "/images/profil/profil-06.jpg", alt: "Detail masáže" },
+];
 
 const services = [
   {
@@ -146,6 +153,25 @@ export default function HomePage() {
             <Link href="/o-mne" className="btn-outline">
               Více o mně
             </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* V pohybu — pár fotek */}
+      <section className="relative overflow-hidden bg-linen">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-leaves bg-cover sm:bg-contain bg-left-bottom bg-no-repeat opacity-55 mix-blend-multiply"
+        />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <Reveal as="p" y={12} className="eyebrow mb-3">
+            V pohybu
+          </Reveal>
+          <Reveal as="h2" delay={0.05} className="font-display text-3xl md:text-4xl text-bark mb-10">
+            Pár fotek z praxe
+          </Reveal>
+          <Reveal delay={0.1}>
+            <PhotoGrid photos={omnePhotos} />
           </Reveal>
         </div>
       </section>
