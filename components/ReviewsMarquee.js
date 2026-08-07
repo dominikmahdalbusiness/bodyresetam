@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 function Star() {
   return (
     <svg aria-hidden viewBox="0 0 20 20" className="h-3.5 w-3.5 fill-sage">
@@ -40,15 +44,49 @@ function MarqueeRow({ items, direction = "left" }) {
   );
 }
 
+// Fallback for prefers-reduced-motion: no auto-scroll, but still swipeable —
+// a static, overflow-hidden track would otherwise leave the rest of the
+// reviews completely unreachable.
+function ScrollRow({ items }) {
+  return (
+    <div className="-mx-4 flex gap-6 overflow-x-auto px-4 pb-2 snap-x snap-mandatory [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] [&::-webkit-scrollbar]:hidden">
+      {items.map((r) => (
+        <div key={r.name} className="shrink-0 snap-start">
+          <ReviewCard name={r.name} text={r.text} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function ReviewsMarquee({ reviews }) {
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+    const onChange = (e) => setReducedMotion(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
   const half = Math.ceil(reviews.length / 2);
   const rowA = reviews.slice(0, half);
-  const rowB = reviews.slice(half);
+  const rowB = reviews.slice(half).length ? reviews.slice(half) : rowA;
+
+  if (reducedMotion) {
+    return (
+      <div className="space-y-6">
+        <ScrollRow items={rowA} />
+        <ScrollRow items={rowB} />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
       <MarqueeRow items={rowA} direction="left" />
-      <MarqueeRow items={rowB.length ? rowB : rowA} direction="right" />
+      <MarqueeRow items={rowB} direction="right" />
     </div>
   );
 }
