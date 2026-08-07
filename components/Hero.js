@@ -98,7 +98,7 @@ export default function Hero() {
           />
           <div className="relative overflow-hidden rounded-arch shadow-xl shadow-bark/20">
             <Image
-              src="/images/profil/profil-02.jpg"
+              src="/images/profil/profil-01.jpg"
               alt="Mgr. Aneta Máčalová — masérka a lektorka Pilates"
               width={432}
               height={540}

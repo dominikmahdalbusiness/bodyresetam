@@ -115,7 +115,7 @@ export default function HomePage() {
           <div aria-hidden className="absolute -left-4 top-4 h-full w-full rounded-arch bg-linen" />
           <div className="relative overflow-hidden rounded-arch">
             <Image
-              src="/images/profil/profil-01.jpg"
+              src="/images/profil/profil-02.jpg"
               alt="Mgr. Aneta Máčalová"
               width={432}
               height={540}
