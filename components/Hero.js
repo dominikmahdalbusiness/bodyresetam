@@ -89,7 +89,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.96, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-sm"
+          className="relative mx-auto w-full max-w-xs md:max-w-sm"
         >
           {/* Šalvějový oblouk za fotkou */}
           <div
