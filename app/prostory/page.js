@@ -27,12 +27,12 @@ const groups = [
     title: "Pilates ve studiu",
     text: "Studio, kde se pravidelně scházíme na lekce Pilates — v úterý a ve čtvrtek.",
     photos: [
-      { src: "/images/prostory/hradistska-01.jpg", alt: "Studio Pilates na Hradišťské" },
-      { src: "/images/prostory/hradistska-03.jpg", alt: "Cvičení ve studiu" },
-      { src: "/images/prostory/hradistska-02.jpg", alt: "Detail studia" },
-      { src: "/images/prostory/hradistska-05.jpg", alt: "Lekce Pilates ve studiu" },
-      { src: "/images/prostory/hradistska-06.jpg", alt: "Cvičení s pomůckami" },
       { src: "/images/prostory/hradistska-04.jpg", alt: "Skupinová lekce ve studiu" },
+      { src: "/images/prostory/hradistska-05.jpg", alt: "Lekce Pilates ve studiu" },
+      { src: "/images/prostory/hradistska-03.jpg", alt: "Cvičení ve studiu" },
+      { src: "/images/prostory/hradistska-06.jpg", alt: "Cvičení s pomůckami" },
+      { src: "/images/prostory/hradistska-01.jpg", alt: "Studio Pilates na Hradišťské" },
+      { src: "/images/prostory/hradistska-02.jpg", alt: "Detail studia" },
     ],
   },
   {
