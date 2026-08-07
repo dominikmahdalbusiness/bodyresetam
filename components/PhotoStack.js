@@ -2,11 +2,12 @@ import Image from "next/image";
 
 // Vrstvený "moodboard" pár fotek — hlavní fotka v oblouku se šalvějovým podkladem
 // a menší akcentová fotka našikmo přes roh, jako vystřižená z nástěnky.
-export default function PhotoStack({ main, accent, align = "left" }) {
-  const accentSide = align === "left" ? "-left-6 md:-left-10" : "-right-6 md:-right-10";
+export default function PhotoStack({ main, accent, align = "left", size = "default" }) {
+  const accentSide = align === "left" ? "left-2 md:left-4" : "right-2 md:right-4";
+  const width = size === "compact" ? "max-w-[16rem] md:max-w-sm" : "max-w-xs md:max-w-sm";
 
   return (
-    <div className="relative mx-auto w-full max-w-xs md:max-w-sm">
+    <div className={`relative mx-auto w-full ${width}`}>
       <div
         aria-hidden
         className="absolute -right-4 top-4 h-full w-full rounded-arch bg-sage/40"

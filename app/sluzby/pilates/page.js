@@ -80,6 +80,7 @@ export default function PilatesPage() {
                 alt: "Detail práce s pilates míčem",
               }}
               align="right"
+              size="compact"
             />
           </Reveal>
           <Reveal delay={0.1} className="rounded-lg bg-cream p-6 shadow-sm">

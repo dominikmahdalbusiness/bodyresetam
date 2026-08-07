@@ -55,6 +55,7 @@ export default function MasazePage() {
               alt: "Aneta Máčalová",
             }}
             align="right"
+            size="compact"
           />
         </Reveal>
 

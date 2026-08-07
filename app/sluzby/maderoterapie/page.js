@@ -46,6 +46,7 @@ export default function MaderoterapiePage() {
               alt: "Maderoterapie v praxi",
             }}
             align="right"
+            size="compact"
           />
         </Reveal>
         <Reveal delay={0.05}>
