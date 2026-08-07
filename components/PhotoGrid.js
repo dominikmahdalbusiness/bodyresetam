@@ -5,6 +5,24 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 
 function Lightbox({ photos, index, onClose, onNav }) {
+  const touchStart = { current: null };
+
+  const onTouchStart = (e) => {
+    const t = e.touches[0];
+    touchStart.current = { x: t.clientX, y: t.clientY };
+  };
+
+  const onTouchEnd = (e) => {
+    if (!touchStart.current) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchStart.current.x;
+    const dy = t.clientY - touchStart.current.y;
+    touchStart.current = null;
+    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+    if (dx < 0) onNav((i) => (i + 1) % photos.length);
+    else onNav((i) => (i - 1 + photos.length) % photos.length);
+  };
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     const onKey = (e) => {
@@ -29,6 +47,8 @@ function Lightbox({ photos, index, onClose, onNav }) {
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-bark/95 p-4"
       onClick={onClose}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
       role="dialog"
       aria-modal="true"
     >
